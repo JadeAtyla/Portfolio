@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atyla | Portforlio</title>
-    <link rel="icon" type="image/svg+xml" href="./assets/Atyla_Logo.svg">
+    <link rel="icon" type="image/svg+xml" href="./assets/images/Atyla_Logo.svg" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="stylesheet" href="animation.css" />
@@ -13,18 +13,28 @@
   <body>
     <div id="top"></div>
     <nav id="desktop-nav">
-      <div class="logo">ATYLA</div>
+      <img
+        class="logo logo-pic"
+        src="./assets/images/Atyla_Logo.svg"
+        alt="Atyla Logo"
+        id="logo-pic"
+      />
       <div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a class="link" href="#about">About</a></li>
+          <li><a class="link" href="#experience">Experience</a></li>
+          <li><a class="link" href="#projects">Projects</a></li>
+          <li><a class="link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">ATYLA</div>
+      <img
+        class="logo logo-pic"
+        src="./assets/images/Atyla_Logo.svg"
+        alt="Atyla Logo"
+        id="logo-pic"
+      />
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -32,22 +42,22 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li><a class="link" href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a class="link" href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a class="link" href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a class="link" href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
     <section id="profile">
       <div class="section__pic-container" onclick="location.href='./#about'">
         <img
-          src="./assets/jadeatylamadigal.png"
+          src="./assets/images/jadeatylamadigal.png"
           alt="Jade Atyla Madigal profile picture"
           id="main-pic"
         />
         <img
-          src="./assets/jadetylamadigal-transparent-bg.png"
+          src="./assets/images/jadetylamadigal-transparent-bg.png"
           alt="Jade Atyla Madigal profile picture"
           id="transparent-pic"
         />
@@ -56,37 +66,36 @@
       <div class="section__text">
         <p class="section__text__p1">Welcome, I'm</p>
         <h1 class="title">Jade Atyla Madigal</h1>
-        <p class="section__text__p2">
-          Fullstack Developer & Digital Artist
-        </p>
+        <p class="section__text__p2">Fullstack Developer & Digital Artist</p>
         <div class="btn-container">
-          <button class="btn btn-color-2" onclick="downloadCV()" id="cv">
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
+            <a class="btn btn-color-2 download" href='./assets/files/Jade Atyla Madigal - Resume.pdf' download = 'Jade Artla Madigal - Resume.pdf'>Download CV</a>
+          <!-- <button class="btn btn-color-1" onclick="location.href='./#contact'"> -->
+            <a class="btn btn-color-1 download" href="./#contact">Contact Info</a>
+          <!-- </button> -->
         </div>
         <div id="socials-container">
           <img
-            src="./assets/facebook.png"
+            src="./assets/images/facebook.png"
             alt="My Facebook profile"
             class="icon"
             onclick="location.href='https://www.facebook.com/jadeatylam'"
           />
           <img
-            src="./assets/github.png"
+            src="./assets/images/github.png"
             alt="My Github profile"
             class="icon"
             onclick="location.href='https://github.com/'"
           />
           <img
-            src="./assets/instagram.png"
+            src="./assets/images/instagram.png"
             alt="My Instagram profile"
             class="icon"
             onclick="location.href='https://www.instagram.com/jeydweirdough?igsh=bDZ6YWtmZ242MnMy'"
           />
         </div>
+      </div>
+      <div class="icon shade-button">
+        <input type="checkbox" name="shade-button" id="shade-button" onclick="toggleCheckbox()"/>
       </div>
     </section>
     <section id="about">
@@ -95,7 +104,7 @@
       <div class="section-container hidden">
         <div class="section__pic-container">
           <img
-            src="./assets/about-pic.png"
+            src="./assets/images/about-pic.png"
             alt="Profile picture"
             class="about-pic"
           />
@@ -104,19 +113,20 @@
           <div class="about-containers">
             <div class="details-container">
               <img
-                src="./assets/experience.png"
+                src="./assets/images/experience.png"
                 alt="Experience icon"
                 class="icon"
               />
               <h3>Experience</h3>
               <p>
-                Backend Development (1+ year)<br />
-                UI Designing (3 Months)
+                Digital Artist (6 years)<br>
+                Backend Development (2 years)<br>
+                UI Designing (1 year)
               </p>
             </div>
             <div class="details-container">
               <img
-                src="./assets/education.png"
+                src="./assets/images/education.png"
                 alt="Education icon"
                 class="icon"
               />
@@ -129,13 +139,26 @@
           </div>
           <div class="text-container">
             <p>
-              As a dedicated third-year BS Computer Science student, I've established a solid foundation in software development and database management. I have knowledge in multiple programming languages, including <i class="language">Java</i>, <i class="language">JavaScript</i>, <i class="language">Python</i>, and <i class="language">PHP</i>, which allows me to handle varied programming difficulties with adaptability and creativity. In addition, I am proficient in <i class="language">MySQL</i> and <i class="language">MongoDB</i> database management, which enhances my abilities to develop and manage data-driven applications. I am dedicated to lifelong learning and using my abilities to develop efficient, scalable solutions for real-world situations.
+              As a dedicated third-year BS Computer Science student, I've
+              established a solid foundation in software development and
+              database management. I have knowledge in multiple programming
+              languages, including <i class="language">Java</i>,
+              <i class="language">JavaScript</i>,
+              <i class="language">Python</i>, and <i class="language">PHP</i>,
+              which allows me to handle varied programming difficulties with
+              adaptability and creativity. In addition, I am proficient in
+              <i class="language">MySQL</i> and
+              <i class="language">MongoDB</i> database management, which
+              enhances my abilities to develop and manage data-driven
+              applications. I am dedicated to lifelong learning and using my
+              abilities to develop efficient, scalable solutions for real-world
+              situations.
             </p>
           </div>
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
+        src="./assets/images/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#experience'"
@@ -151,7 +174,7 @@
             <div class="article-container">
               <article>
                 <img
-                  src="./assets/html.svg"
+                  src="./assets/images/html.svg"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -162,7 +185,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/css.svg"
+                  src="./assets/images/css.svg"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -173,7 +196,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/javascript.svg"
+                  src="./assets/images/javascript.svg"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -189,7 +212,7 @@
             <div class="article-container">
               <article>
                 <img
-                  src="./assets/java.svg"
+                  src="./assets/images/java.svg"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -200,7 +223,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/mysql.svg"
+                  src="./assets/images/mysql.svg"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -211,7 +234,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/mongodb.svg"
+                  src="./assets/images/mongodb.svg"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -222,7 +245,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/python.svg"
+                  src="./assets/images/python.svg"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -233,7 +256,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/nodejs.svg"
+                  src="./assets/images/nodejs.svg"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -244,7 +267,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/php.svg"
+                  src="./assets/images/php.svg"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -258,35 +281,45 @@
           <div class="details-container">
             <h2 class="experience-sub-title">Digital Art Experiences</h2>
             <div class="article-container">
-            <article>
-              <img
-                src="./assets/ibis-paint.svg"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Ibis Paint</h3>
-                <p>6 years</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/figma.svg"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Figma</h3>
-                <p>1 year</p>
-              </div>
-            </article>
-          </div>
+              <article>
+                <img
+                  src="./assets/images/ibis-paint.svg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Ibis Paint</h3>
+                  <p>6 years</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/images/figma.svg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Figma</h3>
+                  <p>1 year</p>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
-        <p>Throughout my Bachelor of Science in Computer Science, I have developed a robust skill set by simultaneously learning multiple programming languages and database management tools. Proficient in Java, JavaScript, Python, and PHP, I bring a versatile approach to software development. My experience extends to database management, where I utilize MySQL and MongoDB to design and implement data-driven solutions. My commitment to continuous learning has equipped me to tackle complex programming challenges with adaptability and efficiency.</p>
+        <p>
+          Throughout my Bachelor of Science in Computer Science, I have
+          developed a robust skill set by simultaneously learning multiple
+          programming languages and database management tools. Proficient in
+          Java, JavaScript, Python, and PHP, I bring a versatile approach to
+          software development. My experience extends to database management,
+          where I utilize MySQL and MongoDB to design and implement data-driven
+          solutions. My commitment to continuous learning has equipped me to
+          tackle complex programming challenges with adaptability and
+          efficiency.
+        </p>
       </div>
       <img
-        src="./assets/arrow.png"
+        src="./assets/images/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#projects'"
@@ -300,7 +333,7 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-1.png"
+                src="./assets/images/project-1.png"
                 alt="Project 1"
                 class="project-img"
               />
@@ -318,7 +351,7 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-2.png"
+                src="./assets/images/project-2.png"
                 alt="Project 2"
                 class="project-img"
               />
@@ -336,7 +369,7 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-3.png"
+                src="./assets/images/project-3.png"
                 alt="Project 3"
                 class="project-img"
               />
@@ -354,7 +387,7 @@
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
+        src="./assets/images/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#contact'"
@@ -366,31 +399,31 @@
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
-            src="./assets/email.png"
+            src="./assets/images/email.png"
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:jamadigal@gmail.com">jamadigal@gmail.com</a></p>
+          <p><a class="link" href="mailto:jamadigal@gmail.com">jamadigal@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
-            src="./assets/telegram.png"
+            src="./assets/images/telegram.png"
             alt="Telegram icon"
             class="icon contact-icon"
           />
-          <p><a href="https://t.me/jamadigal">@jamadigal</a></p>
+          <p><a class="link" href="https://t.me/jamadigal">@jamadigal</a></p>
         </div>
       </div>
-      <h3 class="btn-container"><a href="#top">Back to top</a></h3>
+      <h3 class="btn-container"><a class="link" href="#top">Back to top</a></h3>
     </section>
     <footer>
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a class="link" href="#about">About</a></li>
+            <li><a class="link" href="#experience">Experience</a></li>
+            <li><a class="link" href="#projects">Projects</a></li>
+            <li><a class="link" href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>

@@ -5,24 +5,46 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-function downloadCV() {
-  const cv = document.getElementById("cv");
-  const link = document.createElement("a");
-  link.href = "assets/Jade Atyla Madigal - Resume.pdf";
-  link.download = "Jade Atyla Madigal - Resume.pdf";
-  
-  cv.appendChild(link);
-  link.click();
-
-  cv.removeChild(link);
-}
-
-function toProject(type){
-  const project = `projects.html?title=${type}`
+function toProject(type) {
+  const project = `projects.html?title=${type}`;
   window.location.href = `loading.html?link=${project}`;
 }
 
-function returnMainPage(){
-  const link = 'index.html';
+function returnMainPage() {
+  const link = "index.html";
   window.location.href = `loading.html?link=${link}`;
+}
+
+function toggleCheckbox() {
+  const shade = document.getElementById("shade-button");
+
+  if (shade.checked) {
+    document.body.style.backgroundColor = "black";
+    document.getElementById("logo-pic").src =
+      "./assets/images/Atyla_Logo_Inverted.svg";
+
+    let p = document.getElementsByTagName("p");
+    for (let i = 0; i < p.length; i++) {
+      p[i].style.color = "white";
+    }
+
+    let h1 = document.getElementsByTagName("h1");
+    for (let i = 0; i < h1.length; i++) {
+      h1[i].style.color = "white";
+    }
+
+  } else {
+    document.body.style.backgroundColor = "white";
+    document.getElementById("logo-pic").src = "./assets/images/Atyla_Logo.svg";
+
+    let p = document.getElementsByTagName("p");
+    for (let i = 0; i < p.length; i++) {
+      p[i].style.color = "rgb(85, 85, 85)";
+    }
+
+    let h1 = document.getElementsByTagName("h1");
+    for (let i = 0; i < h1.length; i++) {
+      h1[i].style.color = "black";
+    }
+  }
 }

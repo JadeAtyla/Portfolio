@@ -28,7 +28,7 @@
     display: block;
   }
   .arrow {
-    display: none;
+    display: hidden;
   }
   section,
   .section-container {
@@ -44,6 +44,9 @@
   }
   .about-containers {
     margin-top: 0;
+  }
+  .logo-pic{
+    transform: scale(2.5);
   }
 }
 
@@ -99,5 +102,8 @@
   }
   .text-container {
     text-align: justify;
+  }
+  .logo-pic{
+    transform: scale(2);
   }
 }
