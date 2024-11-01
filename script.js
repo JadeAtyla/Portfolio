@@ -10,9 +10,9 @@ function toProject(type) {
   window.location.href = `loading.html?link=${project}`;
 }
 
-function returnMainPage() {}}
+function returnMainPage() {
   const link = "index.html";
-  window.location.href = `loading.html?link=${link}`;
+  window.location.href = `loading1.html?link=${link}`;
 }
 
 function toggleCheckbox() {
