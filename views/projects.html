@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title value="">Projects</title>
+    <link rel="icon" type="image/svg+xml" href="/images/Atyla_Logo.svg">
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/mediaqueries.css" />
+</head>
+<body>
+  <h3 class="btn-container" onclick="returnMainPage()"><a>Return to Main Page</a></h3>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 id="header-title" class="title">Projects</h1>
+        <div class="experience-details-container hidden">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="/images/project-1.png"
+                  alt="Project 1"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Java Projects</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="toProject('Java Projects')"
+                >
+                  Check Projects
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="/images/project-2.png"
+                  alt="Project 2"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Web Projects</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="toProject('Web Projects')"
+                >
+                  Check Projects
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="/images/project-3.png"
+                  alt="Project 3"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Photography</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="toProject('Photography')"
+                >
+                  Check Projects
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+<script src="/script/script.js"></script>
+<script src="/script/errorhandler.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded1', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get('title');
+
+        if (title) {
+            document.title = title;
+            document.getElementById('header-title').textContent = title;
+        }
+    });
+</script>
+</html>
