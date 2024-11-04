@@ -104,11 +104,10 @@ nav {
 
 #hamburger-nav {
   display: none;
-  z-index: 100;
+  position: relative;
 }
 
 .hamburger-menu {
-  position: relative;
   display: inline-block;
 }
 
@@ -217,7 +216,7 @@ section, .shade-button {
   position: absolute;
   height: 400px;
   width: 400px;
-  z-index: 99;
+  z-index: 100;
 }
 #main-pic, #transparent-pic, .border-wrap{
   border-radius:50%;

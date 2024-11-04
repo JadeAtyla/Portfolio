@@ -18,6 +18,10 @@
   }
   #hamburger-nav {
     display: flex;
+    position: static;
+  }
+  .hamburger-menu{
+    position: relative;
   }
   #experience,
   .experience-details-container {
@@ -28,7 +32,7 @@
     display: block;
   }
   .arrow {
-    display: hidden;
+    display: none;
   }
   section,
   .section-container {
@@ -50,7 +54,17 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
+  #hamburger-nav {
+    display: flex;
+    position: relative;
+  }
+  .hamburger-menu{
+    position: static;
+  }
+  .arrow {
+    display: none;
+  }
   #contact,
   footer {
     height: 40vh;
@@ -105,8 +119,5 @@
   }
   .logo-pic{
     transform: scale(2);
-  }
-  .arrow {
-    display: hidden;
   }
 }
