@@ -104,12 +104,12 @@ nav {
 
 #hamburger-nav {
   display: none;
+  z-index: 100;
 }
 
 .hamburger-menu {
   position: relative;
   display: inline-block;
-  z-index: 100;
 }
 
 .hamburger-icon {
