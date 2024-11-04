@@ -1,23 +1,25 @@
-const express = require('express');
-const path = require('path');
+    const express = require('express');
+    const path = require('path');
 
-const app = express();
+    const app = express();
 
-app.use(express.static(path.join(__dirname, 'public'))); // able to use public folder
-console.log(__dirname);
-app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname, 'views','index.html'));
-});
+    app.use(express.static(path.join(__dirname, 'public'))); // able to use public folder
 
-app.get('/projects', (req, res)=>{
-    res.sendFile(path.join(__dirname, 'views', 'projects.html'));
-});
+    app.get('/', (req, res)=>{
+        res.sendFile(path.join(__dirname, 'views','index.html'));
+    });
 
-app.listen(5050, ()=>{
-    console.log("App listening to port 5050");
-});
+    app.get('/projects', (req, res)=>{
+        res.sendFile(path.join(__dirname, 'views', 'projects.html'));
+    });
 
-// Handles 404 error, or the not related routes for this link
-app.get('*', (req, res)=>{
-    res.sendFile(path.join(__dirname, 'views','errorhandler.html'));
-});
+    // Handles 404 error, or the not related routes for this link
+    app.get('*', (req, res)=>{
+        res.sendFile(path.join(__dirname, 'views','errorhandler.html'));
+    });
+
+    // app.listen(5050, ()=>{
+    //     console.log("App listening to port 5050");
+    // });
+
+    module.exports = app;
