@@ -106,4 +106,7 @@
   .logo-pic{
     transform: scale(2);
   }
+  .arrow {
+    display: hidden;
+  }
 }
