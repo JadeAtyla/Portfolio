@@ -18,8 +18,8 @@
         res.sendFile(path.join(__dirname, 'views','errorhandler.html'));
     });
 
-    app.listen(5050, ()=>{
-        console.log("App listening to port 5050");
-    });
+    // app.listen(5050, ()=>{
+    //     console.log("App listening to port 5050");
+    // });
 
-    // module.exports = app;
+    module.exports = app;
