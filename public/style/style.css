@@ -109,6 +109,7 @@ nav {
 .hamburger-menu {
   position: relative;
   display: inline-block;
+  z-index: 100;
 }
 
 .hamburger-icon {
