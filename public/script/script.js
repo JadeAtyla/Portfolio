@@ -49,12 +49,13 @@ function toggleCheckbox() {
   }
 }
 
-const project_nav = document.querySelectorAll('.project-nav');
+const project_nav = document.querySelectorAll('.project-links');
 const color = ['red', 'blue', 'green'];
 
 project_nav.forEach((nav, index) =>{
   nav.addEventListener('click', ()=>{
     document.body.style.backgroundColor = color[index];
+    project_nav.forEach(link => link.classList.toggle('active', link === nav));
   });
 });
 

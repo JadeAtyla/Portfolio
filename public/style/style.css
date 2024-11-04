@@ -81,11 +81,43 @@ nav {
   text-decoration-color: white;
   cursor: pointer;
 }
-.link:hover{
+.link, .project-nav p.active {
+  display: inline-block;
+  position: relative;
+  color: inherit;
+  padding-bottom: 0.5rem;
+}
+
+.link:hover, .project-nav p.active {
+  color: black;
+  text-decoration: none;
+}
+
+.link::after, .project-nav p.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: grey;
+  transition: transform 0.25s ease-out; 
+  transform-origin: center;
+}
+.link:hover::after, .project-nav p.active::after {
+  transform: scaleX(1);
+}
+
+.project-nav{
+  height: 8vh;
+}
+.nav-links .link{
   color: grey;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+}
+.project-nav p:hover, .project-nav p.active{
+  color: black;
+  text-decoration-color: black;
 }
 .download:hover{
   color: white;
@@ -243,7 +275,7 @@ section, .shade-button {
   font-weight: 600;
 }
 
-.section__text__p1 {
+.section__text__p1, .project-links {
   font-size: 1.25rem;
   text-align: center;
 }
