@@ -6,11 +6,11 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'public'))); // able to use public folder
 
 app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname, 'views','index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'pages', 'index.html'));
 });
 
 app.get('/projects', (req, res)=>{
-    res.sendFile(path.join(__dirname, 'views', 'projects.html'));
+    res.sendFile(path.join(__dirname, 'public', 'pages', 'projects.html'));
 });
 
 app.listen(5050, ()=>{
