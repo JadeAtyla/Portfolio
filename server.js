@@ -4,13 +4,13 @@ const path = require('path');
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public'))); // able to use public folder
-
+console.log(__dirname);
 app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname, 'public', 'pages', 'index.html'));
+    res.sendFile(path.join(__dirname, 'views','index.html'));
 });
 
 app.get('/projects', (req, res)=>{
-    res.sendFile(path.join(__dirname, 'public', 'pages', 'projects.html'));
+    res.sendFile(path.join(__dirname, 'views', 'projects.html'));
 });
 
 app.listen(5050, ()=>{
