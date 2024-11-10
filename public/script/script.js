@@ -15,47 +15,14 @@ function returnMainPage() {
   window.location.href = `loading.html?link=${link}`;
 }
 
-function toggleCheckbox() {
-  const shade = document.getElementById("shade-button");
+const sampleProjects = document.querySelectorAll('.sample-project-container');
+const projectNav = document.querySelectorAll('.project-links');
 
-  if (shade.checked) {
-    document.body.style.backgroundColor = "black";
-    document.getElementById("logo-pic").src =
-      "/images/Atyla_Logo_Inverted.svg";
+sampleProjects[0].classList.toggle('active');
 
-    let p = document.getElementsByTagName("p");
-    for (let i = 0; i < p.length; i++) {
-      p[i].style.color = "white";
-    }
-
-    let h1 = document.getElementsByTagName("h1");
-    for (let i = 0; i < h1.length; i++) {
-      h1[i].style.color = "white";
-    }
-
-  } else {
-    document.body.style.backgroundColor = "white";
-    document.getElementById("logo-pic").src = "/images/Atyla_Logo.svg";
-
-    let p = document.getElementsByTagName("p");
-    for (let i = 0; i < p.length; i++) {
-      p[i].style.color = "rgb(85, 85, 85)";
-    }
-
-    let h1 = document.getElementsByTagName("h1");
-    for (let i = 0; i < h1.length; i++) {
-      h1[i].style.color = "black";
-    }
-  }
-}
-
-const project_nav = document.querySelectorAll('.project-links');
-const color = ['red', 'blue', 'green'];
-
-project_nav.forEach((nav, index) =>{
-  nav.addEventListener('click', ()=>{
-    document.body.style.backgroundColor = color[index];
-    project_nav.forEach(link => link.classList.toggle('active', link === nav));
+projectNav.forEach((nav, index) => {
+  nav.addEventListener('click', () => {
+    sampleProjects.forEach(sample => sample.classList.remove('active'));
+    sampleProjects[index].classList.toggle('active');
   });
 });
-

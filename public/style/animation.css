@@ -9,3 +9,81 @@
     filter: blur(0);
     transform: translateY(0);
 }
+/* .wrapper,
+.wrapper::before,
+.wrapper::after {
+  box-sizing: border-box;
+} */
+
+.wrapper {
+  margin: 0;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 100%;
+  margin-inline: auto;
+  position: relative;
+  height: 5rem;
+  margin-top: 3rem;
+  overflow: hidden;
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -2rem;
+  }
+}
+
+.item {
+  height: 2rem;
+  position: absolute;
+  left: max(calc(2rem * 11), 100%);
+  animation: scrollLeft 20s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1 {
+  animation-delay: calc(20s / 11 * (11 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(20s / 11 * (11 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(20s / 11 * (11 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(20s / 11 * (11 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(20s / 11 * (11 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(20s / 11 * (11 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(20s / 11 * (11 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(20s / 11 * (11 - 8) * -1);
+}
+.item9 {
+    animation-delay: calc(20s / 11 * (11 - 9) * -1);
+}
+
+.item10 {
+animation-delay: calc(20s / 11 * (11 - 10) * -1);
+}
+
+.item11 {
+animation-delay: calc(20s / 11 * (11 - 11) * -1);
+}
