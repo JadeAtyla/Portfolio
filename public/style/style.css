@@ -483,6 +483,7 @@ article .icon {
   transform: scale(1.02);
 }
 .project-title {
+  text-align: start;
   margin: 1rem 0;
   color: var(--primary-color);
 }
@@ -518,16 +519,15 @@ article .icon {
   display: flex;
 }
 .project-text-content{
-  position: absolute;
-  top: 50%;
+  position: relative;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, 10%);
+  transform: translate(-50%, 10%); */
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
   padding: 1rem;
   gap: 0.5rem;
+  margin-top: -10%;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.3);
