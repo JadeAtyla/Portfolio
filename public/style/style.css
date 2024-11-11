@@ -674,3 +674,8 @@ input[type="checkbox"]:checked ~ .check::after
     border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
   }
 }
+
+/* CREDITS */
+.credits{
+  padding-bottom: 5rem;
+}
