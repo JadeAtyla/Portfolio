@@ -1,15 +1,20 @@
+let lastScrollY = window.scrollY;
+
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry)=>{
-        if (entry.isIntersecting) {
+    entries.forEach((entry) => {
+        const isScrollingDown = window.scrollY > lastScrollY;
+        lastScrollY = window.scrollY;
+
+        if (isScrollingDown && entry.isIntersecting) {
             entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');  
+        } else if (!isScrollingDown && !entry.isIntersecting) {
+            entry.target.classList.remove('show');
         }
     });
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el)=>observer.observe(el));
+hiddenElements.forEach((el) => observer.observe(el));
 
 // SLIDE ANIMATION
 const images = ['html', 'css', 'javascript', 'java', 'mysql', 'mongodb', 'python', 'nodejs', 'php', 'ibis-paint', 'figma'];

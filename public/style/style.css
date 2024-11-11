@@ -172,11 +172,13 @@ nav {
 .menu-links {
   position: absolute;
   top: 70%;
+  transform: translateX(-2rem);
   background-color: var(--btn-color-1-text);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
+  z-index: 100;
 }
 
 .menu-links a {
