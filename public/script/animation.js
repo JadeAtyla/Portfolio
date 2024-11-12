@@ -2,7 +2,7 @@ let lastScrollY = window.scrollY;
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        const isScrollingDown = window.scrollY > lastScrollY;
+        const isScrollingDown = window.scrollY >= lastScrollY;
         lastScrollY = window.scrollY;
 
         if (isScrollingDown && entry.isIntersecting) {
